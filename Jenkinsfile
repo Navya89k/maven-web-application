@@ -61,7 +61,7 @@ pipeline {
                                           url: "${TOMCAT_URL}")],
                        contextPath: 'SampleWebApplication',
                        war: "${env.WAR_FILE}"
-                echo " deployment successful"
+                echo " deployment successfully"
             }
         }
     }
