@@ -8,8 +8,8 @@ pipeline {
 
     environment {
         SONARQUBE_ENV = 'SonarQubeServer'      // Name of Sonar server in Jenkins config
-        NEXUS_URL = 'http://34.172.99.7:8081/repository/maven-releases/'
-        TOMCAT_URL = 'http://34.72.123.57:8080/manager/text'
+        NEXUS_URL = 'http://34.173.82.220:8081/repository/maven-releases/'
+        TOMCAT_URL = 'http://34.55.221.192:8080/manager/text'
         WAR_FILE = 'target/SampleWebApplication.war'
     }
 
