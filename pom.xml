@@ -7,7 +7,18 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
  <version>1.0-SNAPSHOT</version>
  <name>Maven Webapp</name>
  <url>http://maven.apache.org</url>
- 
+
+ <distributionManagement>
+  <repository>
+    <id>releases</id>
+    <url>http://34.44.64.182:8081/repository/maven-releases/</url>
+  </repository>
+  <snapshotRepository>
+    <id>snapshots</id>
+    <url>http://34.44.64.182:8081/repository/maven-snapshots/</url>
+  </snapshotRepository>
+</distributionManagement>
+
  <dependencies>
   <dependency>
    <groupId>junit</groupId>
@@ -17,17 +28,14 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
   </dependency>
  </dependencies>
 <build>
-<plugins>
-<plugin>            
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-war-plugin</artifactId>
-  <configuration>
-    <webXml>src\main\webapp\WEB-INF\web.xml</webXml>        
-  </configuration>
-</plugin>
-</plugins>
- 
-  <finalName>SampleWebApplication</finalName>
- </build>
+  <plugins>
+    <plugin>
+      <groupId>org.sonarsource.scanner.maven</groupId>
+      <artifactId>sonar-maven-plugin</artifactId>
+      <version>3.9.1.2184</version>
+    </plugin>
+  </plugins>
+</build>
+
  
 </project>
