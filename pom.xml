@@ -29,13 +29,22 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
  </dependencies>
 <build>
   <plugins>
+    <!-- Sonar Plugin -->
     <plugin>
       <groupId>org.sonarsource.scanner.maven</groupId>
       <artifactId>sonar-maven-plugin</artifactId>
       <version>3.9.1.2184</version>
     </plugin>
+
+    <!-- FIX: Add the WAR Plugin -->
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-war-plugin</artifactId>
+      <version>3.3.2</version> <!-- ✅ Modern version compatible with Java 11/17 -->
+    </plugin>
   </plugins>
 </build>
+
 
  
 </project>
